@@ -1,0 +1,262 @@
+:root {
+  --neon-green: #39ff14;
+  --primary: #1565c0;
+  --bgp: #010101;
+
+  --neon-pink: #ff005e;
+  --neon-cyan: #00d4ff;
+
+  --hover-gradient: linear-gradient(
+    to right,
+    var(--neon-pink),
+    var(--neon-cyan)
+  );
+  --gradient: linear-gradient(
+    to bottom right,
+    var(--neon-pink),
+    var(--neon-cyan)
+  );
+
+  --bg: #000000;
+  --clr-1: #00c2ff;
+  --clr-2: #33ff8c;
+  --clr-3: #ffc640;
+  --clr-4: #e54cff;
+
+  --blur: 1rem;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bgp);
+  color: #fff;
+}
+
+/* Home Start */
+:root {
+  --bgp: #0a0a0a;
+  --clr-1: #00c2ff;
+  --clr-2: #33ff8c;
+  --clr-3: #ffc640;
+  --clr-4: #e54cff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bgp);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: var(--bgp); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===================
+   KIRI: TEKS
+=================== */
+main > div:first-child {
+  flex: 1;
+}
+
+main > div:first-child h3 {
+  font-size: 2rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+
+
+main > div:first-child h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-4)
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 8s ease infinite;
+  margin-bottom: 1rem;
+}
+
+main > div:first-child p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.typewriter {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+}
+
+/* ===================
+   KANAN: GAMBAR ANIMASI SVG
+=================== */
+main > div:last-child {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* WRAPPER UTAMA UNTUK BORDER */
+.svg-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.rounded-svg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 20px; /* ubah sesuai kebutuhan */
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* opsional efek glow */
+}
+
+.rounded-svg svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* LAPISAN GLOW/FEATHER HALUS */
+.svg-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Ganti dari -30px */
+  z-index: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle,
+    rgba(10, 10, 10, 0) 40%,
+    rgba(10, 10, 10, 0.9) 100%
+  );
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* LAPISAN GAMBAR DI DALAMNYA */
+.svg-inner {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: var(--bgp);
+}
+
+.svg-inner svg {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  border-radius: 2rem;
+  overflow: hidden;
+  -webkit-clip-path: inset(0 round 2rem);
+  clip-path: inset(0 round 2rem);
+}
+
+/* ===================
+   ANIMASI GRADIENT TEKS
+=================== */
+@keyframes textGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Home end */
+
+/* Media Queries (supaya responsive diberbagai device) */
+/* Lapto */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main > div:last-child {
+    margin-top: 2rem;
+  }
+
+  main > div:first-child h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile Phone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

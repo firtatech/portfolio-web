@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kopi lur</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Quicksand:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--feather icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <!--My Style-->
+    <link rel="stylesheet" href="nyoba.css" />
+    <link rel="stylesheet" href="aurora.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="skill.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!--  -->
+    <!--  -->
+    <!--navbar start-->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">
+        <span class="aurora-text">FIRTA ALAMSYAH</span>
+        <div class="aurora">
+          <div class="aurora__item"></div>
+          <div class="aurora__item"></div>
+          <div class="aurora__item"></div>
+          <div class="aurora__item"></div>
+        </div>
+      </a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">contact</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!--navbar end-->
+    <!--  -->
+    <!--  -->
+
+    <!--  -->
+    <!--  -->
+    <!-- Home Section Start -->
+    <section id="home">
+      <main>
+        <div>
+          <h3 class="animate__animated animate__bounce">Hi I'am</h3>
+
+          <h1 class=""><i>FIRTA ALAMSYAH</i></h1>
+
+          <div>
+            <p>Here i'am as <span class="typewriter" id="typewriter"></span></p>
+          </div>
+        </div>
+        <!--  preserveAspectRatio="xMidYMid slice"   viewBox="0 0 800 600"-->
+        <div>
+          <div class="svg-wrapper rounded-svg">
+            <div class="svg-inner">
+              <svg
+                width="800"
+                height="600"
+                viewBox="0 0 800 600"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <filter id="dissolve">
+                    <feTurbulence
+                      type="fractalNoise"
+                      baseFrequency="0.012"
+                      result="noise"
+                    />
+                    <feColorMatrix
+                      in="noise"
+                      type="luminanceToAlpha"
+                      result="alphaMask"
+                    />
+                    <feComponentTransfer in="alphaMask" result="animatedMask">
+                      <feFuncA type="linear">
+                        <animate
+                          attributeName="slope"
+                          values="0;1.5;0"
+                          keyTimes="0;0.5;1"
+                          dur="4s"
+                          repeatCount="indefinite"
+                        />
+                      </feFuncA>
+                    </feComponentTransfer>
+                    <feComposite
+                      in="SourceGraphic"
+                      in2="animatedMask"
+                      operator="in"
+                    />
+                  </filter>
+                </defs>
+
+                <image
+                  href="/gambar1.jpg"
+                  width="800"
+                  height="600"
+                  filter="url(#dissolve)"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0;1;1;0;0;0"
+                    keyTimes="0;0.0;0.25;0.333;0.666;1"
+                    dur="12s"
+                    repeatCount="indefinite"
+                  />
+                </image>
+
+                <image
+                  href="/gambar2.jpg"
+                  width="800"
+                  height="600"
+                  filter="url(#dissolve)"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0;0;1;1;0;0"
+                    keyTimes="0;0.333;0.333;0.583;0.666;1"
+                    dur="12s"
+                    repeatCount="indefinite"
+                  />
+                </image>
+
+                <image
+                  href="/gambar3.jpg"
+                  width="800"
+                  height="600"
+                  filter="url(#dissolve)"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0;0;0;1;1;0"
+                    keyTimes="0;0.666;0.666;0.75;0.916;1"
+                    dur="12s"
+                    repeatCount="indefinite"
+                  />
+                </image>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!-- Home Section End -->
+    <!--  -->
+    <!--  -->
+
+    <!--  -->
+    <!--  -->
+    <!-- About Section Start -->
+    <section class="aboutme" id="about">
+      <h1><i>ABOUT ME</i></h1>
+      <div class="content">
+        <div class="img-container">
+          <img src="gambar4.jpg" alt="" />
+        </div>
+        <div class="text-container">
+          <h2>Halo!</h2>
+          <div class="holographic-card">
+            <p>
+              Saya Firta Alamsyah, saat ini saya adalah seorang mahasiswa di
+              Universitas Pamulang, Fakultas Ilmu Komputer, Jurusan Teknik
+              Informatika, bercita-cita menjadi seorang fullstack developer,
+              Saya sangat terbuka untuk berbagai opportunity sebagai digital
+              talent, kalian bisa cek skill saya pada menu skill!, dan lihat
+              kontak saya di menu kontak 😊.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section End -->
+    <!--  -->
+    <!--  -->
+
+    <!--  -->
+    <!--  -->
+    <!-- Skill Section Start -->
+    <section class="skill" id="skills">
+      <h1><i>SKILLS</i></h1>
+      <div class="content-skill">
+        <div class="one">
+          <div class="Office">
+            <h2>Language:</h2>
+            <ul>
+              <li>Indonesia</li>
+              <li>English</li>
+            </ul>
+          </div>
+          <div class="basic-office">
+            <h2>Basic Office:</h2>
+            <ul>
+              <li>Word</li>
+              <li>Excel</li>
+              <li>Power Point</li>
+            </ul>
+          </div>
+        </div>
+        <div class="two">
+          <div class="container">
+            <div class="box-card">
+              <div class="face front">Coding</div>
+              <div class="face back">Back</div>
+              <div class="face right">Design</div>
+              <div class="face left">Programe</div>
+              <div class="face top">Language</div>
+              <div class="face bottom">Office</div>
+            </div>
+          </div>
+        </div>
+        <div class="tree">
+          <h2>Advance:</h2>
+          <ul>
+            <li>draw.io</li>
+            <li>Figma</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>MongoDB</li>
+            <li>Express-Js</li>
+            <li>Vue-Js</li>
+            <li>Node-Js</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Skill Section End -->
+    <!--  -->
+    <!--  -->
+
+    <!--  -->
+    <!--  -->
+    <!-- About Section Start -->
+
+    <div class="contact" id="contact">
+      <div>
+        <h1><i>CONTACT</i></h1>
+
+        <div class="dua">
+          <ul>
+            <li>
+              <a href="#"> <i class="fab fa-facebook-f icon"></i> </a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter icon"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in icon"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-google-plus-g icon"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section End -->
+    <!--  -->
+    <!--  -->
+
+    <div class="footer">
+      <p>
+        &copy; <span id="year"></span> Firta Alamsyah |
+        <i class="fa-regular fa-phone"></i> +62821-1234-5678 |
+        <i class="fab fa-whatsapp"></i> +62899-8765-4321
+      </p>
+    </div>
+
+    <!--Feather icons-->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript-->
+    <script src="nyoba.js"></script>
+  </body>
+</html>

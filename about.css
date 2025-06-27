@@ -1,0 +1,206 @@
+/* Default Desktop */
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.aboutme h1 {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  margin-top: 5rem;
+  position: relative;
+  color: #fff;
+  background: linear-gradient(
+    45deg,
+    #00ffff,
+    #00c2ff,
+    #33ff8c,
+    #aaff00,
+    #ffc640,
+    #e54cff,
+    #ff007f,
+    #00ffff,
+    #33ff8c,
+    #00c2ff
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: auroraMove 6s ease infinite;
+  -webkit-animation: auroraMove 10s ease infinite;
+}
+
+@keyframes auroraMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.img-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.img-container img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 6rem;
+
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(38, 138, 255, 0.8), 0 0 20px rgba(38, 138, 255, 0.6),
+    0 0 30px rgba(38, 138, 255, 0.4);
+}
+
+.text-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+  text-align: left;
+  padding-left: 2rem;
+  box-sizing: border-box;
+}
+
+.text-container h2 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+  cursor: default;
+}
+
+.text-container p {
+  font-size: 1.3rem;
+
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  cursor: default;
+  color: #a1f9c7;
+  text-shadow: 0 0 2px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+    0 0 40px #00ffff;
+}
+
+.holographic-card {
+  padding: 1rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.holographic-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(0, 255, 255, 0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.holographic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet ukuran medium */
+@media (max-width: 992px) {
+  .img-container img {
+    width: 300px;
+    height: 300px;
+    margin-right: 3rem;
+  }
+
+  .text-container {
+    padding-left: 1rem;
+  }
+}
+
+/* Tablet kecil / HP besar */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .img-container,
+  .text-container {
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .img-container img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 2rem auto;
+  }
+
+  .text-container {
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 480px) {
+  .aboutme h1 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  .img-container img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .text-container {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+}

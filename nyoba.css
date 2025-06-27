@@ -1,0 +1,200 @@
+:root {
+  --neon-green: #39ff14;
+  --primary: #1565c0;
+  --bgp: #010101;
+  --nice: #646cff;
+
+  --neon-pink: #ff005e;
+  --neon-cyan: #00d4ff;
+
+  --hover-gradient: linear-gradient(
+    to right,
+    var(--neon-pink),
+    var(--neon-cyan)
+  );
+  --gradient: linear-gradient(
+    to bottom right,
+    var(--neon-pink),
+    var(--neon-cyan)
+  );
+
+  --bg: #000000;
+  --clr-1: #00c2ff;
+  --clr-2: #33ff8c;
+  --clr-3: #ffc640;
+  --clr-4: #e54cff;
+
+  --blur: 1rem;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bgp);
+  color: #fff;
+
+}
+
+/* navbar Start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--nice);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  position: relative;
+  padding: 0.6rem 0; /* padding vertikal cukup */
+  line-height: 1.2;
+  transition: all 0.3s ease;
+  /* transition: color 0.3s; */
+}
+
+.navbar .navbar-nav a::before,
+.navbar .navbar-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--hover-gradient);
+  transform: scaleX(0);
+  transition: transform 0.4s ease-out;
+}
+
+.navbar .navbar-nav a::before {
+  top: -4px; /* langsung nempel atas */
+  transform-origin: left;
+}
+
+.navbar .navbar-nav a::after {
+  bottom: -4px; /* langsung nempel bawah */
+  transform-origin: right;
+}
+
+.navbar .navbar-nav a:hover {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.navbar .navbar-nav a:hover::before,
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* Navbar End */
+
+/* terakhir menit 1:28 */
+
+/* Media Queries (supaya responsive diberbagai device) */
+/* Lapto */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+
+    -o-transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    top: 100%;
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+    -webkit-transform: scaleX(0.2);
+    -moz-transform: scaleX(0.2);
+    -ms-transform: scaleX(0.2);
+    -o-transform: scaleX(0.2);
+  }
+}
+
+/* Mobile Phone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
